@@ -30,6 +30,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transform-style: preserve-3d;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
 .card-content h1 {
@@ -58,4 +59,33 @@ body {
 
 .card-3 .card-content {
     background-color: #3F51B5; /* Azul */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card-content {
+        width: 130%; /* O ajusta este valor según sea necesario */
+        height: 150px;
+    }
+
+    .card-content h1 {
+        font-size: 18px; /* Reduce el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        width: 100%; /* Ajusta el ancho para pantallas muy pequeñas */
+        height: 120px; /* Reduce aún más la altura */
+    }
+
+    .card-content h1 {
+        font-size: 16px; /* Reduce aún más el tamaño del texto */
+    }
 }
