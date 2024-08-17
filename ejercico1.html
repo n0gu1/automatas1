@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ejercicio1.css">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <!-- Ícono de tres rayitas (hamburger) -->
+    <span class="hamburger" onclick="openNav()">&#9776;</span>
+
+    <!-- Sidebar (panel lateral) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">
+            <button class="home-button" onclick="window.location.href='index.html'"></button>
+            <!-- Botón de la casa -->
+        </a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+    </div>
+
+    <div class="container">
+        <div class="input-group">
+            <label for="cadena">Ingrese una cadena</label>
+            <input type="text" id="cadena" name="cadena">
+            <div class="lambda-button-container">
+                <button class="lambda-button" onclick="insertLambda('cadena')">Insertar λ</button>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="longitud">Longitud</label>
+            <input type="text" id="longitud" name="longitud" readonly>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label for="cadenaIngresada">Cadena Ingresada</label>
+                <input type="text" id="cadenaIngresada" name="cadenaIngresada" readonly>
+            </div>
+            <div class="input-group">
+                <label for="segundaCadena">Segunda Cadena</label>
+                <input type="text" id="segundaCadena" name="segundaCadena">
+                <div class="lambda-button-container">
+                    <button class="lambda-button" onclick="insertLambda('segundaCadena')">Insertar λ</button>
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="resultado">Concatenacion</label>
+            <input type="text" id="resultado" name="resultado" readonly>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label for="potencia">Resultado de Potencia</label>
+                <input type="text" id="potencia" name="potencia" readonly>
+            </div>
+            <div class="input-group">
+                <label for="entero">Exponente</label>
+                <input type="text" id="entero" name="entero">
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="inversa">Inversa</label>
+            <input type="text" id="inversa" name="inversa" readonly>
+        </div>
+    </div>
+    <script src="js/ejercicio1.js"></script>
+</body>
+</html>

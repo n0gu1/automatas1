@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 680px;
+    height: 550px; /* Mantener el tamaño original */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.combo-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.combo-box-container label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.combo-box-container select {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #56aaff;
+    font-size: 16px;
+    padding: 5px 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.combo-box-container select:focus {
+    border-color: #007bff;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    padding: 5px 10px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    text-align: center;
+}
+
+.input-group input.invalid {
+    border-color: red;
+}
+
+.lambda-button-container {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Espacio extra para separar del grupo de botones */
+}
+
+.lambda-button, .action-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 200px; /* Ancho de los botones */
+}
+
+.lambda-button:hover, .action-button:hover {
+    background-color: #0056b3;
+}
+
+.action-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre las filas */
+    margin-top: 10px;
+    flex-grow: 10;
+    justify-content: center; /* Centra los botones verticalmente */
+}
+
+.action-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.resultados-container {
+    margin-top: 100px; /* Espacio para mantener el tamaño */
+    text-align: center;
+    width: 100%;
+}
+
+.resultados-container label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.resultados-container input {
+    width: 300px;
+    height: 40px; /* Tamaño igual al input con id "palabra" */
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    padding: 5px 10px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+/* Sidebar (panel lateral) */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    text-align: center; /* Centramos los elementos dentro de la barra lateral */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px auto; /* Añade margen para separar los enlaces */
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    color: #333;
+}
+
+.home-button {
+    width: 50px;
+    height: 50px;
+    background-image: url('../imagenes/home.PNG');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+.home-button:focus {
+    outline: none;
+}

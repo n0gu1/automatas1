@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 480px;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+.input-error {
+    border-color: red !important;
+    background-color: #ffe6e6;
+}
+
+.lambda-button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.lambda-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.lambda-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sidebar (panel lateral) */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    text-align: center; /* Centramos los elementos dentro de la barra lateral */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px auto; /* Añade margen para separar los enlaces */
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    color: #333;
+}
+
+.home-button {
+    width: 50px;
+    height: 50px;
+    background-image: url('../imagenes/home.PNG');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+.home-button:focus {
+    outline: none;
+}

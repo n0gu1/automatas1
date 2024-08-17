@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="css/ejercicio2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <!-- Ícono de tres rayitas (hamburger) -->
+    <span class="hamburger" onclick="openNav()">&#9776;</span>
+
+    <!-- Sidebar (panel lateral) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">
+            <button class="home-button" onclick="window.location.href='index.html'"></button>
+            <!-- Botón de la casa -->
+        </a>
+        <a href="ejercico1.html">Ejercicio 1</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+    </div>
+
+    <div class="container">
+        <div class="combo-box-container">
+            <label for="alfabeto">Selecciona alfabeto</label>
+            <select id="alfabeto" onchange="validateInput()">
+                <option value="Σ1">Σ1 = { λ, 0, 1 }</option>
+                <option value="Σ2">Σ2 = { λ, a, b }</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="palabra">Palabra</label>
+            <input type="text" id="palabra" oninput="validateInput()">
+        </div>
+        <div class="lambda-button-container">
+            <button class="lambda-button" onclick="insertLambda()">Insertar λ</button>
+        </div>
+        <div class="action-buttons-container">
+            <div class="action-buttons-row">
+                <button class="action-button" onclick="addWord()">Agregar Palabra</button>
+                <button class="action-button" onclick="removeWord()">Eliminar Palabra</button>
+                <button class="action-button" onclick="showWords()">Mostrar Palabras</button>
+            </div>
+            <div class="action-buttons-row">
+                <button class="action-button" onclick="concatenateAlphabet()">Concatenar Alfabeto</button>
+                <button class="action-button" onclick="potencia()">Potencia</button>
+                <button class="action-button" onclick="inversa()">Inversa</button>
+            </div>
+            <div class="action-buttons-row">
+                <button class="action-button" onclick="union()">Unión</button>
+                <button class="action-button" onclick="interseccion()">Intersección</button>
+                <button class="action-button" onclick="diferencia()">Diferencia</button>
+            </div>
+        </div>
+        <div class="resultados-container">
+            <label for="resultado">Resultado</label>
+            <input type="text" id="resultado" readonly>
+        </div>
+    </div>
+    <script src="js/ejercicio2.js"></script>
+</body>
+</html>
